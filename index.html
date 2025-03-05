@@ -1,2 +1,111 @@
-<p>大家好</p>
-<img src="https://alatusnm.github.io/微信图片_20250305161944.jpg" alt="替代文本" width="1000" height="1000">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业个人简历 - 李小明</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            color: var(--text-color);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 1rem;
+        }
+        .section {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .experience-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        h1 { color: var(--primary-color); }
+        h2 { color: var(--secondary-color); border-bottom: 2px solid #eee; }
+        .contact-info { 
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 768px) {
+            .experience-item { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>李小明</h1>
+        <div class="contact-info">
+            <span>📱 (+86) 138-0013-8000</span>
+            <span>📧 example@email.com</span>
+            <span>📍 上海市浦东新区</span>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>教育背景</h2>
+        <div class="experience-item">
+            <div>
+                <strong>XXXX大学</strong>
+                <p>财务管理专业 | 2017.09 - 2021.07</p>
+                <p>核心课程：财务会计、管理会计、经济学原理、财务分析</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>专业经历</h2>
+        <div class="experience-item">
+            <div>
+                <strong>高级财务分析师</strong>
+                <p>上海某知名企业 | 2022.03 - 至今</p>
+                <ul>
+                    <li>主导年度预算编制，优化成本结构节省运营开支15%</li>
+                    <li>建立财务预测模型，提升季度预测准确率达92%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>专业技能</h2>
+        <div class="skills-grid">
+            <div>
+                <h3>专业认证</h3>
+                <ul>
+                    <li>注册会计师（CPA）</li>
+                    <li>中级会计师职称</li>
+                </ul>
+            </div>
+            <div>
+                <h3>技术能力</h3>
+                <ul>
+                    <li>精通Excel高级函数与Power BI</li>
+                    <li>熟悉SAP财务模块实施</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
