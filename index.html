@@ -3,109 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>专业个人简历 - 李小明</title>
+    <title>个人经历记录</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #333;
-        }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', system-ui;
             line-height: 1.6;
-            max-width: 960px;
+            max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
-            color: var(--text-color);
         }
-        .header {
-            text-align: center;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 1rem;
+
+        .timeline-section {
+            position: relative;
+            padding: 2rem 0;
+            border-bottom: 2px solid #e0e0e0;
         }
-        .section {
-            margin: 2rem 0;
-            padding: 1rem;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        .timeline-section:last-child {
+            border-bottom: none;
         }
-        .experience-item {
+
+        .experience-header {
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-photo {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .date-period {
+            color: #666;
+            font-size: 0.9em;
+            margin: 0.5rem 0;
+        }
+
+        .description-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
             margin: 1rem 0;
         }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        h1 { color: var(--primary-color); }
-        h2 { color: var(--secondary-color); border-bottom: 2px solid #eee; }
-        .contact-info { 
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        @media (max-width: 768px) {
-            .experience-item { flex-direction: column; }
+
+        @media (max-width: 600px) {
+            .experience-header {
+                flex-direction: column;
+            }
+            .experience-photo {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>李小明</h1>
-        <div class="contact-info">
-            <span>📱 (+86) 138-0013-8000</span>
-            <span>📧 example@email.com</span>
-            <span>📍 上海市浦东新区</span>
-        </div>
+    <header>
+        <h1>我的成长历程</h1>
+        <p>记录人生中的重要时刻与经历</p>
     </header>
 
-    <section class="section">
-        <h2>教育背景</h2>
-        <div class="experience-item">
-            <div>
-                <strong>XXXX大学</strong>
-                <p>财务管理专业 | 2017.09 - 2021.07</p>
-                <p>核心课程：财务会计、管理会计、经济学原理、财务分析</p>
+    <main>
+        <section class="timeline-section">
+            <div class="experience-header">
+                <img src="微信图片_20250305161944.jpg" alt="毕业典礼" class="experience-photo">
+                <div>
+                    <h2>大学毕业典礼</h2>
+                    <p class="date-period">2020.09 - 2024.06</p>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="description-box">
+                <p>在清华大学计算机科学与技术专业完成本科学习，期间参与多个科研项目...</p>
+            </div>
+        </section>
 
-    <section class="section">
-        <h2>专业经历</h2>
-        <div class="experience-item">
-            <div>
-                <strong>高级财务分析师</strong>
-                <p>上海某知名企业 | 2022.03 - 至今</p>
-                <ul>
-                    <li>主导年度预算编制，优化成本结构节省运营开支15%</li>
-                    <li>建立财务预测模型，提升季度预测准确率达92%</li>
-                </ul>
+        <section class="timeline-section">
+            <div class="experience-header">
+                <img src="微信图片_20250305161944.jpg" alt="项目展示" class="experience-photo">
+                <div>
+                    <h2>AI创新项目</h2>
+                    <p class="date-period">2023.03 - 2023.12</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>专业技能</h2>
-        <div class="skills-grid">
-            <div>
-                <h3>专业认证</h3>
-                <ul>
-                    <li>注册会计师（CPA）</li>
-                    <li>中级会计师职称</li>
-                </ul>
+            <div class="description-box">
+                <p>带领团队开发基于深度学习的图像识别系统，获得全国大学生竞赛金奖...</p>
             </div>
-            <div>
-                <h3>技术能力</h3>
-                <ul>
-                    <li>精通Excel高级函数与Power BI</li>
-                    <li>熟悉SAP财务模块实施</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>
